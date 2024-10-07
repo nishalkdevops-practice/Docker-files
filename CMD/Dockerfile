@@ -3,5 +3,6 @@
 FROM almalinux:8 
 
 RUN yum install nginx -y 
+RUN echo "Welcome to the Docker world" > /usr/share/nginx/hello.html
 
 CMD [ "nginx","-g" "daemon off" ]
