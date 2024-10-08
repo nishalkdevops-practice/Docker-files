@@ -1,0 +1,6 @@
+FROM almalinux:8 
+RUN yum install nginx -y 
+RUN rm -rf /usr/share/nginx/html/index.html
+ONBUILD ADD index.html /usr/share/nginx/html/index.html
+#RUN echo "Welcome to the Docker world" > /usr/share/nginx/html/hello.html
+CMD [ "nginx","-g", "daemon off;" ]
