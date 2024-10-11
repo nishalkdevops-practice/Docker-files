@@ -5,4 +5,6 @@ RUN echo "Welcome to the Docker world" > /usr/share/nginx/html/hello.html
 RUN yum install git -y \
     && yum install maven -y 
 
+RUN echo "helo world"
+
 CMD [ "nginx","-g", "daemon off;" ]
