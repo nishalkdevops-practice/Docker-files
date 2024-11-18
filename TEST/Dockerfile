@@ -8,4 +8,6 @@ RUN rm -rf /usr/share/nginx/html/index.html
 
 RUN echo "Welcome to the Docker world" > /usr/share/nginx/html/index.html
 
+EXPOSE 80
+
 ENTRYPOINT [ "nginx","-g", "daemon off;" ]
